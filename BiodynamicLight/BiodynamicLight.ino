@@ -21,7 +21,17 @@ int dayligt[3]  = { 202, 218, 255 };
 int cloudy[3]  = { 229, 243, 255 };
 int noon[3]    = { 255, 242, 230 };
 //int evening[3]  = { 0, 100, 0 };
-int night[3]   = { 83, 84, 107 };
+int night[3]   = { 115, 117, 159 };
+
+// Color arrays for fade
+int sunrise[3]  = { 101, 79, 72 };
+int dayligt[3]  = { 100, 95, 108 };
+int cloudy[3]  = { 100, 95, 108 };
+int noon[3]    = { 139, 108, 102 };
+//int evening[3]  = { 0, 100, 0 };
+int night[3]   = { 27,27,32 };
+
+
 
 int off[3]   = { 20, 20, 20 };
 
@@ -115,7 +125,7 @@ void crossFade(int prvColor[3],int color[3],int strips[4], int wait) {
     grnVal = calculateVal(stepG, grnVal, i);
     bluVal = calculateVal(stepB, bluVal, i);
 
-    for (int ii = 0; int ii < 4; iipp){
+    for (int ii = 0; int ii < 4; ii++){
       analogWrite(strip[ii][0], redVal);   // Write current values to LED pins
       analogWrite(strip[ii][1], grnVal);      
       analogWrite(strip[ii][2], bluVal);
@@ -128,6 +138,28 @@ void crossFade(int prvColor[3],int color[3],int strips[4], int wait) {
   
   delay(hold); // Pause for optional 'wait' milliseconds before resuming the loop
 }
+
+//TODO
+
+/*
+
+  write a function that dims the color in a colorarray based on its current brightness by 
+  converting to hsb then calcultion b = b-( 20 / total time to fade) down using by default animating over a range of 20 unless initial b < 20, then calculating b = b-(initinalB/total time to fade)   
+  converting hsb back to rgb and set the new value 
+
+  (still needs to take fade over the day into account ... keep track of color fade and how far you are into the brightness fade -> take color fade as input and based in that apply brightness fade function... )
+
+  maybe something like:
+   
+   if (isFlimmering[ii]) { //ii refering to the strip
+     ... apply Brightness function to color
+     analogWrite -> colors
+   }else{
+    ... analogWrite unedited color
+   }
+  
+
+ */
 
 
 void brightnessfade(int speed, int strip[3]) { //the higher the speed the slower
