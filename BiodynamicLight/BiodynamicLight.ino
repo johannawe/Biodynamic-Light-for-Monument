@@ -8,12 +8,13 @@
 
 
 // Output
-int strip1Food[3] = {9,10,11}
-int strip2Living[3] 
-int strip3Lifestyle[3] 
-int strip4Transport[3] 
+int strip1Food[3] = {11,10,9};
+//int strip2Living[3] 
+//int strip3Lifestyle[3] 
+//int strip4Transport[3] 
 
-String strips[4] = {"strip1Food", "strip2Living", "strip3Lifestyle", "strip4Transport"}
+String strips[1] = {"strip1Food"};
+//, "strip2Living", "strip3Lifestyle", "strip4Transport"
 
 // Color arrays
 int sunrise[3]  = { 255, 184, 125 };
@@ -24,14 +25,14 @@ int noon[3]    = { 255, 242, 230 };
 int night[3]   = { 115, 117, 159 };
 
 // Color arrays for fade
-int sunrise[3]  = { 101, 79, 72 };
-int dayligt[3]  = { 100, 95, 108 };
-int cloudy[3]  = { 100, 95, 108 };
-int noon[3]    = { 139, 108, 102 };
+//int sunrise[3]  = { 101, 79, 72 };
+//int dayligt[3]  = { 100, 95, 108 };
+//int cloudy[3]  = { 100, 95, 108 };
+//int noon[3]    = { 139, 108, 102 };
 //int evening[3]  = { 0, 100, 0 };
-int night[3]   = { 27,27,32 };
+//int night[3]   = { 27,27,32 };
 
-
+int black[3] = {0,0,0};
 
 int off[3]   = { 20, 20, 20 };
 
@@ -60,9 +61,6 @@ void setup()
   pinMode(strip1Food[1], OUTPUT);   
   pinMode(strip1Food[2], OUTPUT); 
 
-  if (DEBUG) {           // If we want to see values for debugging...
-    Serial.begin(9600);  // ...set up the serial ouput 
-  }
 }
 
 // Main program: list the order of crossfades
@@ -113,7 +111,7 @@ int calculateVal(int step, int val, int i) {
   return val;
 }
 
-void crossFade(int prvColor[3],int color[3],int strips[4], int wait) {
+void crossFade(int prvColor[3],int color[3],int strip[1], int wait) {
 
 
   int stepR = calculateStep(prvColor[0], color[0]);
@@ -125,11 +123,11 @@ void crossFade(int prvColor[3],int color[3],int strips[4], int wait) {
     grnVal = calculateVal(stepG, grnVal, i);
     bluVal = calculateVal(stepB, bluVal, i);
 
-    for (int ii = 0; int ii < 4; ii++){
-      analogWrite(strip[ii][0], redVal);   // Write current values to LED pins
-      analogWrite(strip[ii][1], grnVal);      
-      analogWrite(strip[ii][2], bluVal);
-    }
+   // for (int ii = 0; ii < 1; ii++){
+      analogWrite(strip[0], redVal);   // Write current values to LED pins
+      analogWrite(strip[1], grnVal);      
+      analogWrite(strip[2], bluVal);
+    //}
      
 
     delay(wait); // Pause for 'wait' milliseconds before resuming the loop
@@ -162,7 +160,7 @@ void crossFade(int prvColor[3],int color[3],int strips[4], int wait) {
  */
 
 
-void brightnessfade(int speed, int strip[3]) { //the higher the speed the slower
-  crossfade(cloudy, off, strip, 10)
-  crossfade(off, cloudy, strip, 10)
-}
+//void brightnessfade(int speed, int strip[3]) { //the higher the speed the slower
+  //crossfade(cloudy, off, strip, 10)
+  //crossfade(off, cloudy, strip, 10)
+//}
