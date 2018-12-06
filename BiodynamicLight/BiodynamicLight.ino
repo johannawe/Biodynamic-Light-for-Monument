@@ -18,23 +18,17 @@ String strips[1] = {"strip1Food"};
 
 // Color arrays
 int sunrise[3]  = { 255, 184, 125 };
-int dayligt[3]  = { 202, 218, 255 };
+int daylight[3]  = { 202, 218, 255 };
 int cloudy[3]  = { 229, 243, 255 };
 int noon[3]    = { 255, 242, 230 };
 //int evening[3]  = { 0, 100, 0 };
-int night[3]   = { 115, 117, 159 };
-
-// Color arrays for fade
-//int sunrise[3]  = { 101, 79, 72 };
-//int dayligt[3]  = { 100, 95, 108 };
-//int cloudy[3]  = { 100, 95, 108 };
-//int noon[3]    = { 139, 108, 102 };
-//int evening[3]  = { 0, 100, 0 };
-//int night[3]   = { 27,27,32 };
+int night[3]   = { 10,10,10 };
 
 int black[3] = {0,0,0};
 
-int off[3]   = { 20, 20, 20 };
+int off[3]   = { 0, 20, 230 };
+int hii[3] = {255,0,0};
+int hi[3] = {0,0,0};
 
 // Set initial color
 int redVal = black[0];
@@ -66,10 +60,14 @@ void setup()
 // Main program: list the order of crossfades
 void loop()
 {
-  crossFade(night, sunrise, strip1Food, 10);
-  crossFade(sunrise, cloudy, strip1Food, 10);
-  crossFade(cloudy, noon, strip1Food, 10);
-  crossFade(noon, night, strip1Food, 10);
+
+
+  crossFade(sunrise, cloudy, strip1Food, 2);
+  crossFade(cloudy, noon, strip1Food, 2);
+  crossFade(noon, sunrise, strip1Food, 2);
+  
+  //crossFade(hii, off, strip1Food, 2);
+  //crossFade(noon, night, strip1Food, 2);
 
   if (repeat) { // Do we loop a finite number of times?
     j += 1;
@@ -158,9 +156,3 @@ void crossFade(int prvColor[3],int color[3],int strip[1], int wait) {
   
 
  */
-
-
-//void brightnessfade(int speed, int strip[3]) { //the higher the speed the slower
-  //crossfade(cloudy, off, strip, 10)
-  //crossfade(off, cloudy, strip, 10)
-//}
