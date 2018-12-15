@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    
+    <head> 
+        <meta charset="utf-8">
+        <meta title =":D">
+        <link rel="stylesheet" href="style.css" type="text/css"> 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script >
+
+        $(function () {
+
+        var socket = io();
+        $('#toggle').on("click", function(){
+            socket.emit('toggle', true);
+        })
+
+        $('#toggle2').on("click", function(){
+            socket.emit('toggle2', true);
+        })
+
+        $('#toggle3').on("click", function(){
+            socket.emit('toggle3', true);
+        })
+
+        $('#toggle4').on("click", function(){
+            socket.emit('toggle4', true);
+        })
+
+        $('#myRange').on("input", function(){
+            console.log(this.value)
+            socket.emit('slider',this.value+"\r\n", true);
+        })
+
+    
+        // socket.on ('connect', function(){
+        //     alert("You are connected!")
+        // })
+
+        // socket.on ('disconnect', function(){
+        //     alert("Server kicked you out!")
+        // })
+        // socket.on ('event', function(data){
+        //     console.log(data);
+
+        // })
+           
+
+        });
+      
+
+    </script>
+    
+    </head>
+
+    <body>    
+
+        <div id="wrapper">
+            <ul class="nav">
+                <li>Food</li>
+                <li>Lifestyle</li>
+                <li>Living</li>
+                <li>Transport</li>
+            </ul>
+            <div class="content">
+                            <button id="toggle">:)</button>
+            <button id="toggle2">a</button>
+            <button id="toggle3">b</button>
+            <button id="toggle4">c</button>
+            <!-- <div class="slidecontainer">
+              <input type="range" min="1" max="250" value="50" class="slider" id="myRange">
+            </div> -->
+
+
+            </div>
+
+        </div> 
+
+    
+   
+    </body>
+</html>
