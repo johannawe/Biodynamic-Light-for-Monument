@@ -2,6 +2,7 @@
 <html>
     
     <head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <meta charset="utf-8">
         <meta title =":D">
         <link rel="stylesheet" href="style.css" type="text/css"> 
@@ -29,9 +30,13 @@
             socket.emit('toggle4', true);
         })
 
-        $('#myRange').on("input", function(){
+        $('#myRange').on("change", function(){
             console.log(this.value)
             socket.emit('slider',this.value+"\r\n", true);
+        })
+        $('#myRange').on("input", function(){
+           $('#inputval').text(this.value)
+            // socket.emit('slider',this.value+"\r\n", true);
         })
 
     
@@ -58,20 +63,27 @@
     <body>    
 
         <div id="wrapper">
-            <ul class="nav">
+            <!-- <ul class="nav">
                 <li>Food</li>
                 <li>Lifestyle</li>
                 <li>Living</li>
                 <li>Transport</li>
-            </ul>
+            </ul> -->
             <div class="content">
-                            <button id="toggle">:)</button>
-            <button id="toggle2">a</button>
+            <button id="toggle">Play</button> 
+            
+            <div class="heading">
+                <h2>Flicker</h2>
+                <p id="inputval">50</p>
+                <div class="clear"></div>
+            </div>
+
+            <!-- <button id="toggle2">Flicker</button>
             <button id="toggle3">b</button>
-            <button id="toggle4">c</button>
-            <!-- <div class="slidecontainer">
-              <input type="range" min="1" max="250" value="50" class="slider" id="myRange">
-            </div> -->
+            <button id="toggle4">c</button>  -->
+            <div class="slidecontainer">
+              <input type="range" min="0" max="255" value="50" class="slider"step="10.0" id="myRange">
+            </div>
 
 
             </div>

@@ -1,0 +1,189 @@
+ html{
+	width: 100%;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	background-color: #000;
+	color: #fff;
+	overflow: hidden;
+}
+
+body{
+
+	margin: 0;
+	/*margin: 0;*/
+	box-sizing: border-box;
+	width: 100%;
+	overflow: hidden;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper{
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+ul.nav{
+	display: inline-flex;
+	width: 100%;
+	box-sizing: border-box;
+
+	margin: 0;
+	margin-bottom: 16px;
+	position: absolute;
+
+}
+
+li{
+	flex-grow: 1; 
+	text-align: center;
+	text-decoration: none;
+	list-style: none;
+	/*padding: 8px;*/
+}
+
+p{
+	color: #9f9f9f;
+}
+
+.content{
+	padding-top: 80px;
+}
+
+.heading{
+
+}
+
+
+.slidercontainer{
+	width: 100%;
+}
+
+.slidercontainer input{
+	width: 100%;
+}
+
+.heading{
+}
+
+.heading h2{
+	float: left;
+}
+
+.heading p{
+	float: right;
+}
+
+
+.clear{
+	clear: both;
+	float: none;
+}
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 40px; /* Specified height */
+  background: none; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .5s; /* 0.2 seconds transition on hover */
+  transition: opacity .5s;
+  border-radius: 1px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+-webkit-transition: .5s; /* 0.2 seconds transition on hover */
+  transition: opacity .5s;
+  
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 10px; /* Set a specific slider handle width */
+  height: 10px; /* Slider handle height */
+  background: #fff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 7px;
+  border: none;
+  margin-top: -4px;
+}
+ 
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+    margin-top: -4px;
+}
+ 
+h2{
+	font-size: 1rem;
+	padding-bottom: 10px;
+	letter-spacing: 1px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #777;
+  border-radius: 1px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #999;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #777;
+  border-radius: 1px;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #777;
+  border-radius: 1px;
+}
+input[type=range]::-ms-fill-lower {
+
+}
+input[type=range]:focus::-ms-fill-lower {
+
+}
+input[type=range]::-ms-fill-upper {
+}
+input[type=range]:focus::-ms-fill-upper {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.slidercontainer input{
+	width: 100%;
+}

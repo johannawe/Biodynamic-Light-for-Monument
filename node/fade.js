@@ -120,6 +120,18 @@ abends - (zuhause)
 
 
 
+uint32_t early_morning[] = {72,75, 100};
+uint32_t morning[] = {217,159, 108};
+uint32_t day[] = {204,180, 249};
+uint32_t afternoon[] = {193,180, 198};
+uint32_t evening[] = {118,106, 109};
+uint32_t lateevening[] = {49,49, 52};
+
+
+
+
+
+
 
 
 */ 
