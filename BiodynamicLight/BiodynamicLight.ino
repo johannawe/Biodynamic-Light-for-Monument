@@ -45,12 +45,10 @@ uint32_t early_morning[] = {72,75, 100};
 uint32_t morning[] = {219,159, 128};
 uint32_t day[] = {204,210, 221};
 uint32_t day2[] = {227,230, 238};
-//uint32_t afternoon[] = {211,154, 128};
+uint32_t afternoon[] = {211,154, 128};
 uint32_t evening[] = {167,145, 108};
-//uint32_t lateevening[] = {49,49, 22};
-uint32_t lateevening[] = {249,0, 0};
+uint32_t lateevening[] = {49,49, 22};
 
-uint32_t afternoon[] = {0,0, 228};
 
 
 
