@@ -1,0 +1,94 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
+html{
+	width: 100%;
+	font-size: 18px;
+	font-family: "Inter UI", Helvetica, serif;
+	color: #2A2A2A;	
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100%;
+	font-size: 18px;
+	font-family: "Inter UI", Helvetica, serif;
+	color: #2A2A2A;
+}	
+
+#wrapper{
+
+}
+h1{
+	font-size: 28px;
+	text-align: center;
+	width: 100%;
+	padding-top: 36px;
+}
+
+nav{
+	height: 107px;
+	background: rgba(0,0,0,0.02);
+	width: 100%;
+	position: absolute;
+}
+
+button{
+	font-size: 16px;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.shop_content{
+
+	max-width: 1600px;
+	position: relative;
+	margin: auto;
+	padding-top: 190px;
+}
+
+.product_meta{
+	position: absolute;
+	top: 325px;
+	width: 100%;
+}
+.card{
+	float: left;
+	width: 339px;
+	position: relative;
+	height: 462px;
+	margin: 25px 30px;
+	background: #fff;
+	background: #FFFFFF;
+	box-shadow: 0 0 37px 0 rgba(108,115,136,0.10), 2px 35px 70px -12px rgba(172,180,186,0.39);
+}
+
+
+.card h2{
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1rem;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.card h3{
+	font-weight: 400;
+	font-size: 1rem;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.card p{
+	font-weight: 400;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.product_img{
+	position: absolute;
+}
+
