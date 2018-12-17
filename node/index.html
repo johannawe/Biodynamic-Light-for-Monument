@@ -14,20 +14,12 @@
         $(function () {
 
         var socket = io();
-        $('#toggle').on("click", function(){
-            socket.emit('toggle', true);
+        $('#play').on("click", function(){
+            socket.emit('play', true);
         })
 
-        $('#toggle2').on("click", function(){
-            socket.emit('toggle2', true);
-        })
-
-        $('#toggle3').on("click", function(){
-            socket.emit('toggle3', true);
-        })
-
-        $('#toggle4').on("click", function(){
-            socket.emit('toggle4', true);
+        $('#stop').on("click", function(){
+            socket.emit('stop', true);
         })
 
         $('#myRange').on("change", function(){
@@ -70,7 +62,8 @@
                 <li>Transport</li>
             </ul> -->
             <div class="content">
-            <button id="toggle">Play</button> 
+            <button id="play">Play</button> 
+            <button id="stop">Stop</button> 
             
             <div class="heading">
                 <h2>Flicker</h2>
@@ -82,7 +75,7 @@
             <button id="toggle3">b</button>
             <button id="toggle4">c</button>  -->
             <div class="slidecontainer">
-              <input type="range" min="0" max="255" value="50" class="slider"step="10.0" id="myRange">
+              <input type="range" min="1" max="20" value="10" class="slider"step="1.0" id="myRange">
             </div>
 
 

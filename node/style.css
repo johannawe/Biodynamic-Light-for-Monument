@@ -174,9 +174,17 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 
-
-
-
+button{
+	font-size: inherit;
+	color: black;
+	height: 40px;
+	border: none;
+	background: white;
+	width: 40%;
+	border-radius: 20px;
+	margin-bottom: 40px;
+	margin-right: 10px;
+}
 
 
 

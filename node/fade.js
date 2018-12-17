@@ -17,7 +17,7 @@ var serial = "n"
 
 
 
-var port = new SerialPort('/dev/cu.usbmodem144140', {
+var port = new SerialPort('/dev/cu.usbmodem143120', {
 	baudRate: 9600
 })
 
@@ -75,12 +75,12 @@ app.use('/', express.static(__dirname));
 
 io.on('connection', function(socket){
 	console.log("A client connected to my server!")
-	socket.on('toggle', function(msg){
+	socket.on('stop', function(msg){
 		
-		port.write("n")
+		port.write("stop")
   });
-	socket.on('toggle2', function(msg){
-		port.write("a")
+	socket.on('play', function(msg){
+		port.write("play")
   });
 	socket.on('toggle3', function(msg){
 		port.write("b")
