@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>clock-ico</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-6" transform="translate(7.500000, 7.500000)">
+            <path d="M12.5,25 C5.59281872,25 3.62376795e-13,19.4001167 3.62376795e-13,12.5 C3.62376795e-13,5.59988333 5.59281872,-7.10542736e-15 12.5,-7.10542736e-15 C19.4071813,-7.10542736e-15 25,5.59988333 25,12.5 C25,19.4001167 19.4071813,25 12.5,25 Z" id="Combined-Shape" fill="#3673FF" fill-rule="nonzero"></path>
+            <polyline id="Path-8" stroke="#FFFFFF" stroke-width="2" points="12.5 4.225 12.5 12.225 17.5 12.225"></polyline>
+        </g>
+    </g>
+</svg>

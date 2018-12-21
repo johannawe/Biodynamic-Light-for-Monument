@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    
+    <head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <meta charset="utf-8">
+        <meta title ="Amazon">
+        <link rel="stylesheet" href="app.css" type="text/css"> 
+        <link rel="stylesheet" href="app-states.css" type="text/css"> 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="navigation.js"></script>
+    
+    </head>
+
+    <body>    
+
+        <div id="wrapper">
+            <header>
+                <div id="status"><img src="img/app/statusbar.png" width="100%"></div>
+                <div id="profile"><img src="img/app/profile.svg"></div>
+                <h1>Account</h1>
+                <div class="greedy">
+                    <div id="indicator"></div>
+                    <h2 id="now" class="active">Now</h2>
+                    <h2 id="today">Today</h2>
+                    <h2 id="last-week">Last Week</h2>
+                </div>
+            </header>
+            <div id="ich-bin-ein-div"><img src="img/app/today.png" width="100%s"></div>
+            <div id="noch-ein-div">
+                <div  class="content">
+                    <div id="bank-card">
+                        <h1>Clara Ley</h1>
+                        <h4 id="tcid">TCID<span style="background-color: rgba(203,203,203,.8); border-radius: 10px; margin-left: 5px; padding: 1px 10px;" >12345678902345</span></h4>
+                        <hr>
+                        <div id="budget">
+                            <p style="padding-right: 40px">145,59</p><div class="terracoin-symbol" style="position: absolute; bottom: 27px; right: 0px;"></div>
+                        <h4>Total Budget</h4>
+                        </div>
+                        
+                    </div>
+                    <table style="width:100%" cellspacing= "0">
+                      <tr>
+                        <th><h4>Budgets</h4></th>
+                        <th><div class="terracoin-symbol-s"></div></th> 
+                      </tr>
+                      <tr>
+                        <td>Transport</td>
+                        <td><p class="coin-table">30,35</p></td>
+                      </tr>
+                      <tr>
+                        <td>Food</td>
+                        <td><p class="coin-table">35,21</p></td>
+                      </tr>
+                      <tr>
+                        <td>Lifestyle</td>
+                        <td><p class="coin-table">29,00</p></td>
+                      </tr>
+                      <tr>
+                        <td>Living</td>
+                        <td><p class="coin-table">25,03</p></td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+            <nav>
+                <div class="navigation-icon">
+                    <a href="app.html">
+                    <img src="img/app/clock-ico-active.svg"></a>
+                </div>
+                <div class="navigation-icon">
+                    <a href="app-earning.html">
+                    <img src="img/app/earn-ico.svg"></a>
+                </div>
+                <div class="navigation-icon active">
+                    <a href="app-saving.html">
+                    <img src="img/app/save-ico.svg"></a>
+                </div>
+            </nav>
+        </div> 
+
+    
+   
+    </body>
+</html>

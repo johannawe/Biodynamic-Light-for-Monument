@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta charset="utf-8">
+    <meta title="Amazon">
+    <link rel="stylesheet" href="app.css" type="text/css">
+    <link rel="stylesheet" href="app-states.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="feedback" id="transfer-notify"><p>You transfered <span style="font-weight: 500">20,00 TC</span> from<span style="font-weight: 500"> "Mallorca" to your "Transport" Budget</span>.</p></div>
+        <header>
+            <div id="status"><img src="img/app/statusbar.png" width="100%"></div>
+                <div class="popup" id="popup">
+                    <div class="first-level">
+                        <div class="handle"></div>
+                        <ul>
+                            <li id="pay-out"><h3>Pay out</h3>
+                            </li>
+                            <li id="pay-in"><h3>Pay in</h3>
+                            </li>
+                            <li id="pay-edit"><h3>Edit</h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="second-level off">
+                        <div class="handle"></div>
+
+                        <ul>
+                            <li id="pay-out"><h3>Pay out</h3>
+                            </li>
+                        </ul>
+                        <ul class="details">
+                            <li class="title"><h4>Account</h4>
+                            </li>
+                            <li id="pay-out-to-transport"><div class="icon" style="background: url('img/app/transport.svg') no-repeat center center / cover;"></div>Transport</li>
+                            <li><div class="icon" style="background: url('img/app/food.svg') no-repeat center center / cover;"></div>Food</li>
+                            <li><div class="icon" style="background: url('img/app/lifestyle.svg') no-repeat center center / cover;"></div>Lifestyle</li>
+                            <li><div class="icon" style="background: url('img/app/living.svg') no-repeat center center / cover;"></div>Living</li>
+                            <li class="title"><h4>Vault</h4>
+                            </li>
+                            <li>Mallorca</li>
+                            <li>Macbook 15 inch</li>
+                        </ul>
+                    </div>
+                    <div class="third-level off">
+                        <p>Pay out to <b>Transport</b></p>
+                        <div style="position: absolute; width: 95px; height: 95px; top: 122px; left: 140px; background: url('img/app/vehicle.svg') no-repeat center center / cover;"></div>
+                        <input class="enter-payout" type="text">
+                        <div id="terracoin-symbol" class="terracoin-symbol"></div>
+                        <div class="floatbox">
+                            <button id="cancel">Cancel</button>
+                            <button id="pay" class="hero">Pay</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dimmer invisible off">
+                </div>
+                <h1>Saving</h1>
+                <div class="tabbar">
+                    <div>
+                        <h2 class="active" style="border-bottom: 2px solid #3A76FF">Vault</h2>
+                    </div>
+                    <div>
+                        <h2>Tips</h2>
+                    </div>
+                </div>
+        </header>
+        <div class="content">
+            <h4 class="section-heading">All Vaults</h4>
+            <div id="italy-vacation" class="vault-card">
+                <h3>Mallorca</h3>
+                <div class="graph">
+                    <svg width="180px" height="180px" viewbox="0 0 100 100">
+                        <!-- Center color -->
+                        <circle cx="50" cy="50" r="40" fill="rgba(0,0,0,0)" id="radius" />
+                        <!-- Default color of ring -->
+                        <circle cx="50" cy="50" r="48" fill="transparent" stroke-width="4" stroke="rgba(0,0,0,0.06)" />
+                        <!-- 80% fill -->
+                        <circle cx="50" cy="50" r="48" fill="transparent" stroke-width="4" stroke="#636E99" data-fill="80" class="progress" />
+                        <!-- 70% filled -->
+                    </svg>
+                    <div class="save-icon">
+                        <img src="img/app/save/plane.svg">
+                    </div>
+                        <h2 class="saved-amount">50,00</h2>
+                        <h5 class="total-amount">/750,00</h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="meta-data">
+                            <p>1.095 Days</p>
+                            <h5>remaining</h5>
+                        </div>
+                        <div class="meta-data">
+                            <p>20 TC</p>
+                            <h5>every Month</h5>
+                        </div>
+                        <button class="edit">edit</button>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <div class="vault-card">
+                    <h3>MacBook 15 inch</h3>
+                    <div class="graph">
+                        <svg width="180px" height="180px" viewbox="0 0 100 100">
+                            <!-- Center color -->
+                            <circle cx="50" cy="50" r="40" fill="rgba(0,0,0,0)" id="radius" />
+                            <!-- Default color of ring -->
+                            <circle cx="50" cy="50" r="48" fill="transparent" stroke-width="4" stroke="rgba(0,0,0,0.06)" />
+                            <!-- 80% fill -->
+                            <circle cx="50" cy="50" r="48" fill="transparent" stroke-width="4" stroke="#DB8D7F" data-fill="80" class="progress" />
+                            <!-- 70% filled -->
+                        </svg>
+                        <div class="save-icon">
+                            <img src="img/app/save/macbook.svg">
+                    </div>
+                            <h2 class="saved-amount">20,00</h2>
+                            <h5 class="total-amount">/560,00</h5>
+                        </div>
+                        <div class="card-footer">
+                            <div class="meta-data">
+                                <p>1629 Days</p>
+                                <h5>remaining</h5>
+                            </div>
+                            <div class="meta-data">
+                                <p>10 TC</p>
+                                <h5>every Month</h5>
+                            </div>
+                            <button class="edit">edit</button>
+                            <div class="clear">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <div class="navigation-icon">
+                        <a href="app.html">
+                    <img src="img/app/clock-ico.svg"></a>
+                    </div>
+                    <div class="navigation-icon">
+                        <a href="app-earning.html">
+                    <img src="img/app/earn-ico.svg"></a>
+                    </div>
+                    <div class="navigation-icon active">
+                        <a href="app-saving.html">
+                    <img src="img/app/save-ico-active.svg"></a>
+                    </div>
+                </nav>
+            </div>
+</body>
+
+</html>

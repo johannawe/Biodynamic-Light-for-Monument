@@ -51,7 +51,6 @@ uint32_t lateevening[] = {49,49, 22};
 
 
 
-
 uint32_t curr_1[] = {1,1,1};
 uint32_t curr_2[] = {1,1,1};
 uint32_t curr_3[] = {1,1,1};
@@ -183,34 +182,34 @@ void fadeShit(){
      
     if (shit == 0){
        fade(curr_1, time_of_day, early_morning, morning);
-       flackern(curr_2, time_of_day, meh,early_morning, morning, vel);
-       fade(curr_3, time_of_day, early_morning, morning);
+       flackern(curr_3, time_of_day, meh,early_morning, morning, vel);
        fade(curr_4, time_of_day, early_morning, morning);
+       fade(curr_2, time_of_day, early_morning, morning);
     }else if(shit == 1){
       fade(curr_1, time_of_day, morning, day);
-      flackern(curr_2, time_of_day, meh,morning, day, vel);
-      fade(curr_3, time_of_day, morning, day);
+      flackern(curr_3, time_of_day, meh,morning, day, vel);
       fade(curr_4, time_of_day, morning, day);
+      fade(curr_2, time_of_day, morning, day);
     }else if(shit == 2){
       fade(curr_1, time_of_day, day, afternoon);
-      flackern(curr_2, time_of_day, meh,day, afternoon, vel);
-      fade(curr_3, time_of_day, day, afternoon);
+      flackern(curr_3, time_of_day, meh,day, afternoon, vel);
       fade(curr_4, time_of_day, day, afternoon);
+      fade(curr_2, time_of_day, day, afternoon);
     }else if(shit == 3){
       fade(curr_1, time_of_day, afternoon, evening);
-      flackern(curr_2, time_of_day, meh,afternoon, evening, vel);
-      fade(curr_3, time_of_day, afternoon, evening);
+      flackern(curr_3, time_of_day, meh,afternoon, evening, vel);
       fade(curr_4, time_of_day, afternoon, evening);
+      fade(curr_2, time_of_day, afternoon, evening);
     }else if(shit == 4){
       fade(curr_1, time_of_day, evening, lateevening);
-      flackern(curr_2, time_of_day, meh,evening, lateevening, vel);
-      fade(curr_3, time_of_day, evening, lateevening);
+      flackern(curr_3, time_of_day, meh,evening, lateevening, vel);
       fade(curr_4, time_of_day, evening, lateevening);
+      fade(curr_2, time_of_day, evening, lateevening);
     }else if(shit == 5){
       fade(curr_1, time_of_day, lateevening, early_morning);
-      flackern(curr_2, time_of_day, meh,lateevening, early_morning, vel);
-      fade(curr_3, time_of_day, lateevening, early_morning);
+      flackern(curr_3, time_of_day, meh,lateevening, early_morning, vel);
       fade(curr_4, time_of_day, lateevening, early_morning);
+      fade(curr_2, time_of_day, lateevening, early_morning);
     }
 }
 

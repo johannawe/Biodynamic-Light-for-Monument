@@ -1,0 +1,788 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
+html {
+    width: 100%;
+    font-size: 15px;
+    font-family: "Inter UI", Helvetica, serif;
+    color: #2A2A2A;
+    background-color: #FAFAFA;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow: hidden;
+    background-image: linear-gradient(white 107px, #fafafa 100%);
+
+    position: fixed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*,
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+body {
+    width: 100%;
+    font-size: 15px;
+    font-family: "Inter UI", Helvetica, serif;
+    color: #2A2A2A;
+    background-image: linear-gradient(white 100px, #fafafa 100%);
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: hidden;
+    position: relative;
+    letter-spacing: 0.2;
+    line-height: 20px;
+}
+
+.wrapper {}
+
+
+
+
+
+/*header*/
+h1 {
+    letter-spacing: 0.1;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+
+/*Tabbar*/
+h2 {
+    letter-spacing: 0.18;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+
+/*large black*/
+h3 {
+    letter-spacing: 0.25;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+/*Medium grey*/
+h4 {
+    letter-spacing: 0.43;
+    font-weight: 600;
+    opacity: 0.27;
+}
+
+h4.section-heading {
+    height: 40px;
+    line-height: 40px;
+    margin: 5px 0px;
+}
+
+/*Small grey*/
+h5 {
+    letter-spacing: 0.37;
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.27;
+}
+
+nav {
+    background: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px;
+    justify-content: center;
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+    /*z-index: 100000;*/
+
+}
+
+
+header {
+    height: 107px;
+    position: absolute;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fafafa;
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+    /*z-index: 100000;*/
+}
+
+header .greedy {
+    position: absolute;
+    bottom: -1px;
+    /*width: 100%;*/
+    left: 0;
+    right: 0;
+    height: 50px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+header .greedy h2 {
+    padding: 0px 10px;
+    bottom: 10px;
+    opacity: 0.55;
+    transform: translateX(50%);
+    position: absolute;
+}
+
+header .greedy #indicator {
+    height: 2px;
+    background: #3A76FF;
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+header .greedy h2.active {
+    opacity: 1;
+}
+
+
+header .tabbar {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+}
+
+header .tabbar div {
+    width: 50%;
+    float: left;
+    position: relative;
+}
+
+header .tabbar div h2 {
+    padding: 10px 10px;
+    opacity: 0.55;
+    text-align: center;
+    clear: both;
+    position: relative;
+    transform: translateX(-50%);
+    display: inline-block;
+    margin-left: 50%;
+}
+
+header .tabbar div h2.active {
+    padding: 10px 10px;
+    opacity: 1;
+    text-align: center;
+    clear: both;
+    position: relative;
+    transform: translateX(-50%);
+    display: inline-block;
+    margin-left: 50%;
+}
+
+header h1 {
+    margin: 0px auto;
+    padding-top: 40px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+#status {
+    position: fixed;
+    bottom: 643px;
+    z-index: 10000000;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition-delay: all 0.3s
+}
+
+
+.popup {
+    background: #FFFFFF;
+    box-shadow: 0 3px 22px 0 rgba(52, 78, 160, 0.13), 0 1px 0 0 rgba(55, 59, 64, 0.04), 1px 5px 12px -7px rgba(76, 82, 90, 0.11);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    bottom: -200px;
+    z-index: 1000000000000000;
+    left: 0;
+    position: fixed;
+    height: 200px;
+    right: 0;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+
+
+.expanded {
+    height: 473px;
+}
+
+
+.pay-out-expanded {
+    height: 410px;
+}
+
+.popup input {
+    position: absolute;
+    bottom: 100px;
+    left: 15px;
+    right: 15px;
+}
+
+.popup p {
+    padding: 15px;
+}
+
+.popup ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    height: 60px;
+}
+
+.popup ul li h3 {
+    line-height: 60px;
+    padding-left: 15px;
+}
+
+
+.popup ul.details li {
+    line-height: 45px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    height: 45px;
+    padding-left: 15px;
+}
+
+
+.popup ul.details li.title {
+    line-height: 50px;
+    height: 50px;
+}
+
+.small-li{
+	height: 35px;
+	line-height: 35px;
+}
+
+.popup .handle {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    height: 20px;
+}
+
+.popup .handle:after {
+    content: "";
+    width: 27px;
+    background: rgba(146, 146, 146, 0.3);
+    height: 3px;
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+
+}
+
+nav .navigation-icon {
+    width: 40px;
+    height: 40px;
+    background: none;
+    display: inline-block;
+    flex-grow: 40px;
+    margin: 7.5px 40px;
+    background: white;
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+}
+
+.tap-nav {
+    transform: scale(1.1);
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+}
+
+.content {
+    position: absolute;
+    top: 108px;
+    left: 0;
+    right: 0;
+    bottom: 55px;
+    padding: 0px 10px 15px 10px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+#noch-ein-div {
+	position: absolute;
+    top: 108px;
+    left: 0;
+    right: 0;
+    bottom: 55px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    -webkit-transition: all 0s;
+    /* Safari */
+    transition: all 0s;
+}
+
+#noch-ein-div .content{
+	top: 0;
+    padding: 0px 10px 15px 10px;
+	left: 0px;
+	right: 0px;
+	bottom: 0;
+}
+
+#ich-bin-ein-div {
+    position: absolute;
+    top: 108px;
+    left: -100%;
+    width: 100%;
+    background-image: linear-gradient(white 107px, #fafafa 100%);
+    bottom: 55px;
+    box-sizing: border-box;
+    padding: 0px 10px 15px 10px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+input {
+    border-radius: 0;
+    border: none;
+    outline: none;
+    background: none;
+    height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    font-size: 32px;
+    font-weight: 500;
+    text-align: right;
+    font-family: inherit;
+}
+
+input.enter-payout{
+	padding-right: 45px;
+}
+
+
+table {
+    padding: 0px 5px;
+}
+
+table th {
+    text-align: left;
+}
+
+
+table th:last-child {
+    text-align: right;
+}
+
+p.coin-table {
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.23;
+    text-align: right;
+}
+
+tr {
+    height: 40px;
+    padding: 0;
+
+}
+
+td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+tbody>tr:last-child>td {
+    border-bottom: 0;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background: rgba(0, 0, 0, 0.06);
+
+}
+
+button {
+    background: rgba(54, 115, 255, 0.11);
+    /*padding: 0px 15px;*/
+    text-transform: uppercase;
+    color: rgb(54, 115, 255);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    width: 80px;
+    outline: none;
+    box-shadow: none;
+    float: right;
+}
+
+button.hero {
+    background: rgba(54, 115, 255, 1);
+    color: white;
+}
+
+
+.tap-button {
+    background: rgba(54, 115, 255, 0.21);
+
+}
+
+
+button:focus {
+    background: rgba(54, 115, 255, 0.5);
+}
+
+
+
+.clear {
+    clear: both;
+}
+
+/*----------ACCOUNT----------*/
+#profile {
+    position: absolute;
+    top: 35px;
+    right: 15px;
+}
+
+.content #bank-card {
+    box-sizing: border-box;
+    height: 220px;
+    margin: 0 auto;
+    position: relative;
+    width: 345px;
+    border-radius: 7px;
+    margin: 25px 5px 40px 5px;
+    /*margin-bottom: ;*/
+    background-image: linear-gradient(-145deg, #F6F6F6 0%, #FEFEFE 100%);
+    box-shadow: 0 3px 22px 0 rgba(79, 91, 128, 0.29), 0 1px 0 0 rgba(55, 59, 64, 0.05), 1px 5px 12px -7px rgba(76, 82, 90, 0.11);
+    padding: 15px;
+
+}
+
+.content #bank-card #tcid {
+    margin-top: 5px;
+}
+
+.content #bank-card hr {
+    margin-top: 20px;
+
+}
+
+.content #bank-card #budget {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.content #bank-card #budget p {
+    margin-top: 5px;
+    font-size: 32px;
+    letter-spacing: 0.2;
+    font-weight: 600;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.content #bank-card #budget h4 {
+    text-align: right;
+}
+
+
+/*----------EARNING----------*/
+
+
+
+.content .job-card {
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 15px;
+    box-shadow: 0 3px 22px 0 rgba(79, 91, 128, 0.29), 0 1px 0 0 rgba(55, 59, 64, 0.05), 1px 5px 12px -7px rgba(76, 82, 90, 0.11);
+    overflow: hidden;
+    border-radius: 7px;
+    margin-top: 15px;
+    height: 400px;
+
+    background: #fff;
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+}
+
+
+
+.content .job-card p.main-content {
+    margin: 10px 0px 20px 0px;
+    height: 83px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+}
+
+
+.content .job-card p.main-content.expanded-card {
+    height: 185px;
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+}
+
+
+.content .job-card h3 {
+    margin-bottom: 3px;
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+}
+
+
+
+.content .job-card .close-job-button{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	opacity: 0;
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	transition-delay: all  0.2s;
+}
+
+
+.content .job-card .close-job-button.expanded-card {
+	opacity: 1;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.content .job-card .meta-data:not(:last-of-type){
+    margin-right: 50px;
+}
+.hero-img {
+    height: 155px;
+    overflow: hidden;
+    margin-top: -15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 15px;
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+}
+
+.hero-img img {
+    object-fit: scale-down;
+    width: 150%;
+}
+
+.hero-img.expanded-card {
+    height: 240px;
+
+}
+
+/*----------SAVING----------*/
+.content {
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+}
+
+.content .vault-card {
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 3px 22px 0 rgba(79, 91, 128, 0.29), 0 1px 0 0 rgba(55, 59, 64, 0.05), 1px 5px 12px -7px rgba(76, 82, 90, 0.11);
+    overflow: hidden;
+    height: 393px;
+    width: 355px;
+    margin-bottom: 15px;
+}
+
+.card-footer {
+    position: absolute;
+    bottom: 15px;
+}
+
+.content .card-footer {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    right: 15px;
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+}
+
+.card-footer.expanded-card {
+    bottom: 85px;
+    -webkit-transition: all 0.3s;
+    /* Safari */
+    transition: all 0.3s;
+}
+
+.dimmer {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    /*	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);*/
+    background: rgba(203, 203, 203, 0.7);
+    opacity: 0.5;
+    z-index: 1000;
+    opacity: 1;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+.content .vault-card .graph {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    margin-top: 60px;
+    position: relative;
+    border-radius: 97px;
+}
+
+.content .vault-card .graph svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.terracoin-symbol{
+	background: url("img/app/save/terracoin-semibold.svg") no-repeat center center / cover;
+	width: 25px;
+    height: 25px;
+}
+
+.terracoin-symbol-s{
+	background: url("img/app/terracoin-grey-medium.svg") no-repeat center center / cover;
+	width: 12px;
+    height: 12px;
+    float: right;
+}
+
+.icon{
+	width: 15px;
+	height: 15px;
+	transform: translateY(1.5px);
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#terracoin-symbol{
+	position: absolute;
+    bottom: 113px;
+    right: 25px;
+}
+
+.content .vault-card .graph .save-icon {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content .vault-card .graph h2 {
+    padding-top: 90px;
+    text-align: center;
+}
+
+.content .vault-card .graph h5 {
+    text-align: center;
+}
+
+.meta-data {
+    float: left;
+}
+
+.content .vault-card .meta-data {
+    margin-right: 20px;
+}
+
+.meta-data h5 {
+    margin-top: -2px;
+}
+
+.content .meta-data p {
+    margin: 0;
+}
+
+.floatbox {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    display: flex;
+}
+
+.job-card .floatbox {
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+}
+
+
+
+.feedback{
+	position: fixed;
+	z-index: 100000000000000000000000000000;
+	background: #fafafa;
+	top: -100px;
+	left: 0;
+	padding: 15px;
+	margin: 15px;
+	box-sizing: border-box;
+	/*padding-top: 30px;*/
+	border-radius: 8px; 
+    box-shadow: 0 3px 22px 0 rgba(79, 91, 128, 0.29), 0 1px 0 0 rgba(55, 59, 64, 0.05), 1px 5px 12px -7px rgba(76, 82, 90, 0.11);
+	right: 0;
+		transition: 0.3s;
+	-webkit-transition: 0.3s;
+	transition-delay: 0.5s;
+}
+.feedback.ison{
+	top: 5px;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	transition-delay: 0.5s;
+}
+.floatbox>button {
+    flex-grow: 1;
+    height: 40px;
+    margin: 10px;
+    border-radius: 20px;
+
+}

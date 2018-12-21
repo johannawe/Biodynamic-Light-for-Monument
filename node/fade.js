@@ -17,14 +17,14 @@ var serial = "n"
 
 
 
-var port = new SerialPort('/dev/cu.usbmodem143120', {
+var port = new SerialPort('/dev/cu.usbmodem143140', {
 	baudRate: 9600
 })
 
 
 const parser = port.pipe(new Readline({delimiter: '\r\n'}));
 parser.on('data', function(e){
-	console.log(e)
+	sconsole.log(e)
 //	io.sockets.emit("event", e);
 })
 	// parser.on('data', data =>{

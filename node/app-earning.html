@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta charset="utf-8">
+    <meta title="Amazon">
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:600" rel="stylesheet">
+    <link rel="stylesheet" href="app.css" type="text/css">
+    <link rel="stylesheet" href="app-states.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper" id="earnig">
+        <div class="feedback" id="job-notify"><p>You successfully accepted a the Job <span style="font-weight: 500">"Purifying the Ganges in India"</span>.</p></div>
+        <header>
+            <div id="status"><img src="img/app/statusbar.png" width="100%"></div>
+                <h1>Earning</h1>
+                <div class="tabbar">
+                    <div><h2 class="active" style="border-bottom: 2px solid #3A76FF">Explore</h2>
+                    </div>
+                    <div>
+                        <h2>Your Jobs</h2>
+                    </div>
+                </div>
+        </header>
+        <div class="content">
+            <div class="job-card closed-job">
+                <div class="close-job-button"><img src ="img/app/jobs/close.svg"></div>
+                    <div class="hero-img"><img src="img/app/jobs/ganges.jpg" ></div>
+                        <div>
+                            <div style="float: left;">
+                                <h3>Purify the Ganges <br>in India</h3>
+                                <h5>12.09.20 - 12.11.20</h5>
+                            </div>
+                            <div id="activation-code" class="off" style="float: right; ">
+                                <p style=" text-align: right; font-family: 'Overpass Mono', sans-serif; font-size: 19px; padding-top: 4px;">2235HKE5</p>
+                                <h5 style="text-align: right; font-size: 12px">Workspace Login</h5>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <p class="main-content">The Ganges has been poisoned by chemicals and garbage and is therefore a 
+danger to nature and humans. Help the engineers in India and create together
+new concepts for cleaning the river.
+</p>
+                        <div class="card-footer">
+                            <div class="meta-data">
+                                <p>95,00 TC</p>
+                                <h5>payment</h5>
+                            </div>
+                            <div class="detailed-meta off">
+                                <div class="meta-data">
+                                    <p>16 days</p>
+                                    <h5>est. worktime</h5>
+                                </div>
+                                <div class="meta-data">
+                                    <p>GreenTree</p>
+                                    <h5>Organisation</h5>
+                                </div>
+                            </div>
+                            <button class="edit" id="more">more</button>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <div class="floatbox off">
+                            <button id="accept-job">Accept Job</button>
+                            <button id="go-to-jobs" class="hero off">Go to your Jobs</button>
+                        </div>
+                    </div><div class="job-card closed-job">
+                <div class="close-job-button"><img src ="img/app/jobs/close.svg"></div>
+                    <div class="hero-img"><img src="img/app/jobs/plastic.jpg" ></div>
+                        <div>
+                            <div style="float: left;">
+                                <h3>Rebuilding the Great <br>Barrier Reef
+</h3>
+                                <h5>16.09.20 - 31.12.20</h5>
+                            </div>
+                            <div id="activation-code" class="off" style="float: right; ">
+                                <p style=" text-align: right; font-family: 'Overpass Mono', sans-serif; font-size: 19px; padding-top: 4px;">2235HKE5</p>
+                                <h5 style="text-align: right; font-size: 12px">Workspace Login</h5>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <p class="main-content">
+Only 20% of the Great Barrier Reef remains.
+Manage the teams at the Great Barrier Reef
+and help the reef to regenerate.</p>
+                        <div class="card-footer">
+                            <div class="meta-data">
+                                <p>115,00 TC</p>
+                                <h5>payment</h5>
+                            </div>
+                            <div class="detailed-meta off">
+                                <div class="meta-data">
+                                    <p>11 days</p>
+                                    <h5>est. worktime</h5>
+                                </div>
+                                <div class="meta-data">
+                                    <p>GreenTree</p>
+                                    <h5>Organisation</h5>
+                                </div>
+                            </div>
+                            <button class="edit" id="more">more</button>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <div class="floatbox off">
+                            <button id="accept-job">Accept Job</button>
+                            <button id="go-to-jobs" class="hero off">Go to your Jobs</button>
+                        </div>
+                    </div>
+                    <div class="job-card closed-job">
+                        <div class="close-job-button"><img src ="img/app/jobs/close.svg"></div>
+                            <div class="hero-img"><img src="img/app/jobs/braunkohle.jpg" ></div>
+                                <div>
+                                    <div style="float: left;">
+                                        <h3>Reforsting cleared <br>forests</h3>
+                                        <h5>10.10.20 - 19.11.20</h5>
+                                    </div>
+                                    <div id="activation-code" class="off" style="float: right; ">
+                                        <p style=" text-align: right; font-family: 'Overpass Mono', sans-serif; font-size: 19px; padding-top: 4px;">2235HKE5</p>
+                                        <h5 style="text-align: right; font-size: 12px">Workspace Login</h5>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <p class="main-content">Support foresters and local helpers in the reconstruction of 
+forests cleared by coal-fired power stations. 
+<br><br> <br>Wiedenbrückerstr. 1 <br>Stuttgart</p>
+                                <div class="card-footer">
+                                    <div class="meta-data">
+                                        <p>160,00 TC</p>
+                                        <h5>payment</h5>
+                                    </div>
+                                    <div class="detailed-meta off">
+                                        <div class="meta-data">
+                                            <p>12 days</p>
+                                            <h5>est. worktime</h5>
+                                        </div>
+                                        <div class="meta-data">
+                                            <p>GreenTree</p>
+                                            <h5>Organisation</h5>
+                                        </div>
+                                    </div>
+                                    <button class="edit" id="more">more</button>
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                                <div class="floatbox off">
+                                    <button id="accept-job">Accept Job</button>
+                                    <button id="go-to-jobs" class="hero off">Go to your Jobs</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav>
+                        <div class="navigation-icon">
+                            <a href="app.html">
+                    <img src="img/app/clock-ico.svg"></a>
+                        </div>
+                        <div class="navigation-icon">
+                            <a href="app-earning.html">
+                    <img src="img/app/earn-ico-active.svg"></a>
+                        </div>
+                        <div class="navigation-icon active">
+                            <a href="app-saving.html">
+                    <img src="img/app/save-ico.svg"></a>
+                        </div>
+                    </nav>
+                </div>
+</body>
+
+</html>
