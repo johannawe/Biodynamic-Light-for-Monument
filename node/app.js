@@ -56,7 +56,7 @@ $("#pay").on("touchend", function(){
 	$("#popup").css("bottom", "-"+$("#popup").height() +"px");
 	$(".dimmer").addClass("invisible");
 	setTimeout(function(){$(".dimmer").addClass("off")}, 300);
-		$("#transfer-notify").addClass("ison");
+	$("#transfer-notify").addClass("ison");
 	setTimeout(function(){$("#transfer-notify").removeClass("ison")},2000)
 
 })

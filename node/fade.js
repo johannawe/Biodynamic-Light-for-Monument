@@ -17,7 +17,7 @@ var serial = "n"
 
 
 
-var port = new SerialPort('/dev/cu.usbmodem143140', {
+var port = new SerialPort('/dev/cu.usbmodem141120', {
 	baudRate: 9600
 })
 
